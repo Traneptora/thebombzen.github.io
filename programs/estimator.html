@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Rating Estimator</title>
+<link rel="stylesheet" href="../styles.css">
+<script type="text/javascript" src="rating.js"></script>
+<script type="text/javascript" src="../contentloaded.js"></script>
+<script type="text/javascript">
+function calculateExpAndPerf() {
+	var r0s = [];
+	for (var j = 0; j < 12; j++){
+		var ra = +(document.getElementById("r"+j).value);
+		if (!isNaN(ra) && ra != 0){
+			r0s.push(ra);
+		}
+	}
+	var rating = 1.0 * document.getElementById("rating").value;
+	var exp = getMultiExpectancy(rating, r0s);
+	document.getElementById("exp").innerHTML = +(Math.round(exp + "e+3") + "e-3");
+	var score = 1.0 * document.getElementById("score").value;
+	var perf = getPerformance(score, r0s);
+	document.getElementById("perf").innerHTML = +(Math.round(perf + "e+3") + "e-3");
+	var postevent = getEstimatedPostEvent(rating, score, r0s);
+	document.getElementById("post").innerHTML = postevent;
+	var norm = getHighestNormEarned(score, r0s);
+	document.getElementById("norm").innerHTML = norm;
+	var kfactor = getK(rating, r0s.length);
+	document.getElementById("kfactor").innerHTML = +(Math.round(kfactor + "e+3") + "e-3");
+}
+</script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="maintitle">
+	Rating Estimator
+	</div>
+	<hr>
+	This calculates your expectancy, performance, estimated post-event rating, and expected norm earned in a USCF dual-rated chess tournament. The advantage this has over the USCF's rating estimator is that this one shows your expectancy and your estimated norm earned. Unlike the <a href="quads.html">Quads Rating Estimator</a>, this one is not perfectly accurate and will tend to overestimate if you do particularly well and will tend to underestimate if you do particularly poorly.<br><br>
+	<form action="javascript:calculateExpAndPerf()">
+		<div>
+			<div style="width: 40%;">
+				<div style="padding-top: 5px; padding-bottom: 5px;">
+					<div style="width: 50%; float: left;">Your Rating: </div><div style="width: 50%; float: left;"><input style="text-align: right;" type="text" id="rating"></div>
+				</div>
+				<br style="clear: both;">
+				<div style="padding-top: 5px; padding-bottom: 5px;">
+					<div style="width: 50%; float: left;">Your Score: </div><div style="width: 50%; float: left;"><input style="text-align: right;" type="text" id="score"></div>
+				<br style="clear: both;">
+				</div>
+			</div>
+			<div style="padding-top: 5px; padding-bottom: 5px;">Others' ratings:</div>
+			<div class="tabledisplay">
+				<div>
+					<div>
+						<div><input type="text" id="r0"></div>
+						<div><input type="text" id="r1"></div>
+						<div><input type="text" id="r2"></div>
+						<div><input type="text" id="r3"></div>
+					</div>
+					<div>
+						<div><input type="text" id="r4"></div>
+						<div><input type="text" id="r5"></div>
+						<div><input type="text" id="r6"></div>
+						<div><input type="text" id="r7"></div>
+					</div>
+					<div>
+						<div><input type="text" id="r8"></div>
+						<div><input type="text" id="r9"></div>
+						<div><input type="text" id="r10"></div>
+						<div><input type="text" id="r11"></div>
+					</div>
+				</div>
+			</div>
+			<div><input type="submit" value="Calculate"></div>
+			<div class="results">
+				<div class="results-row"><div>Expectancy: </div><div id="exp"></div></div>
+				<div class="results-row"><div>Performance: </div><div id="perf"></div></div>
+				<div class="results-row"><div>Post-event: </div><div id="post"></div></div>
+				<div class="results-row"><div>K-Factor: </div><div id="kfactor"></div></div>
+				<div class="results-row"><div>Norm Earned: </div><div id="norm"></div></div>
+			</div>
+		</div>
+	</form>
+	<hr>
+	Norm key:
+	<ul>
+	<li>S: Life Senior Master, 2400</li>
+	<li>M: Life Master, 2200</li>
+	<li>C: Candidate Master, 2000</li>
+	<li>1: 1st Category, 1800</li>
+	<li>2: 2nd Category, 1600</li>
+	<li>3: 3rd Category, 1400</li>
+	<li>4: 4th Category, 1200</li>
+	</ul>
+	<hr>
+	<div id="footer" class="home-page"><a href="../index.html">Home Page</a></div>
+</div>
+</body>
+</html>

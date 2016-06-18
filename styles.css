@@ -1,0 +1,159 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic);
+
+body {
+	text-align: center;
+	background-color: #0B305D;
+	
+}
+
+body, textarea {
+	font-family: "Open Sans";
+	color: #FFFFFF;
+	line-height: 1.25;
+	font-size: 16px;
+	letter-spacing: 0.125px;
+	font-weight: 300;
+}
+
+input {
+	color: #000000;
+}
+
+blockquote {
+	border-left: 5px solid #DDDDDD;
+    color: #FFFFFF;
+    font-style: italic;
+    padding-left: 10px;
+}
+
+a:link, a:visited {
+	color: #F0B000;
+}
+
+a:active, a:focus, a:hover {
+	color: #D0E000;
+}
+
+a.importantlink {
+	font-weight: 400;
+}
+
+li a:first-of-type {
+	font-weight: 400;
+}
+
+ol li, ul li {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-right: 10%;
+}
+
+li {
+	margin-right: 10%;
+}
+
+#maintitle {
+	font-weight: 400;
+	font-size: 48px;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
+
+#wrapper {
+	width: 900px;
+	text-align: left;
+	margin: 0 auto;
+}
+
+#footer {
+	text-align: right;
+}
+
+.section-header {
+	text-decoration: underline;
+	font-size: 24px;
+	letter-spacing: 0.25px;
+	font-weight: 600;
+	font-style: italic;
+}
+
+.home-page {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+img {
+	background-color: #777777;
+}
+
+img.shadow {
+	padding: 5px;
+	background-color: #000000;
+    box-shadow: inset 0px 0px 3px 3px #777777;
+}
+
+a img:focus,
+a img:hover,
+a img:active {
+	background: #D0E000;
+}
+
+.tabledisplay {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	text-align: center;
+}
+
+.tabledisplay div {
+	margin: auto;
+	display: inline-block;
+}
+
+.tabledisplay div div {
+	padding-bottom: 5px;
+}
+
+.tabledisplay div div:last-child {
+	padding-bottom: initial;
+}
+
+.tabledisplay div div div {
+	 padding-left: 5px;
+	 padding-right: 5px;
+	 float: left;
+}
+
+.tabledisplay div div div:last-child {
+	float: initial;
+}
+
+.tabledisplay div div div input {
+	width: 150px;
+	text-align: right;
+}
+
+.results {
+	width: 40%;
+	clear: both;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	display: block;
+}
+
+.results-row {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: both;
+}
+
+.results-row div:first-child {
+	width: 50%;
+	float: left;
+}
+
+.results-row div:last-child {
+	text-align: right;
+	width: 50%;
+	float: right;
+}
+

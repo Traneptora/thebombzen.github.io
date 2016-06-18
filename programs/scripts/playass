@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+rm -f subs-playass.ass
+ffmpeg -y -i "$1" -map 0:s -c:s copy subs-playass.ass
+ffplay "$1" -vf ass=subs-playass.ass
+rm -f subs-playass.ass
+
