@@ -1,3 +1,4 @@
-# LeoScruffohio
+# thebombzen.github.io
 
-My website source for http://leo.scruffohio.net/
+My website source for http://thebombzen.github.io/
+
