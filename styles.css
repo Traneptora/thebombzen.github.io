@@ -1,45 +1,40 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic);
 
 body {
 	text-align: center;
-	background-color: #0B305D;
-	
+	background-color: #F8F8F8;
 }
 
 body, textarea {
 	font-family: "Open Sans";
-	color: #FFFFFF;
+	color: #081F5D;
 	line-height: 1.25;
 	font-size: 16px;
 	letter-spacing: 0.125px;
-	font-weight: 300;
-}
-
-input {
-	color: #000000;
+	font-weight: 400;
 }
 
 blockquote {
 	border-left: 5px solid #DDDDDD;
-    color: #FFFFFF;
+    color: #0B305D;
     font-style: italic;
     padding-left: 10px;
 }
 
 a:link, a:visited {
-	color: #F0B000;
+	color: #0F4FFF;
 }
 
 a:active, a:focus, a:hover {
-	color: #D0E000;
+	color: #200090;
 }
 
 a.importantlink {
-	font-weight: 400;
+	font-weight: 600;
 }
 
 li a:first-of-type {
-	font-weight: 400;
+	font-weight: 600;
 }
 
 ol li, ul li {
@@ -53,7 +48,7 @@ li {
 }
 
 #maintitle {
-	font-weight: 400;
+	font-weight: 700;
 	font-size: 48px;
 	text-align: center;
 	letter-spacing: 0.5px;
@@ -73,7 +68,7 @@ li {
 	text-decoration: underline;
 	font-size: 24px;
 	letter-spacing: 0.25px;
-	font-weight: 600;
+	font-weight: 700;
 	font-style: italic;
 }
 
