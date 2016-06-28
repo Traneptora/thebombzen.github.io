@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 	var p = document.createElement("span");
+	p.style.clear = "both";
 	p.innerHTML = 'Website designed and programmed entirely by me. <i>Open Sans</i> typeface Copyright Google Inc.';
 	var p2 = document.createElement("p");
 	p2.innerHTML = '<a href="#">Back to Top</a><div class="spacer" style="width: 30px;"></div><a href="/">Home Page</a>';
