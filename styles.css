@@ -152,3 +152,17 @@ a img:active {
 	float: right;
 }
 
+.rightalignedline > *, .rightalignedline p > * {
+	float: left;
+}
+
+.rightalignedline > .spacer {
+	overflow: hidden;
+	height: 1px;
+}
+
+.rightalignedline {
+	float: right;
+}
+
+
