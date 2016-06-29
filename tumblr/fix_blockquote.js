@@ -3,10 +3,15 @@ function fixBlockQuote(bq){
 		fixBlockQuote(bq.parentElement);
 		console.log(bq);
 		var el = bq.parentElement.parentElement;
-		var first = bq.previousElementSibling;
-		var second = bq;
+		var third = bq;
+		var second = bq.previousElementSibling;
+		var first = second.previousElementSibling;;
+
+		el.insertBefore(third, el.firstChild);
 		el.insertBefore(second, el.firstChild);
-		el.insertBefore(first, el.firstChild);
+		if (first){
+			el.insertBefore(first, el.firstChild);
+		}
 	}
 }
 document.addEventListener("DOMContentLoaded", function(){
