@@ -251,9 +251,7 @@ img.photo {
     border-top: 1px solid #404040;
     border-bottom: 1px solid #404040;
     margin: 0 auto 3px;
-    {block:IfNotHeaderImage}
     padding: 40px 0;
-    {/block:IfNotHeaderImage}
     width: 900px;
 }
 #header h1 a {
