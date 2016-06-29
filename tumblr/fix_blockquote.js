@@ -1,7 +1,6 @@
 function fixBlockQuote(bq){
 	if (bq.previousElementSibling.tagName.toLowerCase() === "p" && bq.parentElement.tagName.toLowerCase() === "blockquote"){
 		fixBlockQuote(bq.parentElement);
-		console.log(bq);
 		var el = bq.parentElement.parentElement;
 		var par = bq.parentElement;
 		var first = bq.previousElementSibling;
