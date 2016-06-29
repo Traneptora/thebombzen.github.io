@@ -599,12 +599,13 @@ img.photo {
 .photoset-block {
 	
 }
+
 .tooltip img {
-	display: none;
+	display: block;
 	position: absolute;
 }
 
 .tooltip:hover img {
-	display: initial;
+
 }
 
