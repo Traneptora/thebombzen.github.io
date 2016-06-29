@@ -1,12 +1,14 @@
 function fixBlockQuote(bq){
-	if (bq.previousElementSibling.tagName.toLowerCase() === "p" && bq.parentElement.tagName.toLowerCase() === "blockquote"){
+	if (bq.parentElement.tagName.toLowerCase() === "blockquote"){
 		fixBlockQuote(bq.parentElement);
 		var el = bq.parentElement.parentElement;
 		var par = bq.parentElement;
 		var first = bq.previousElementSibling;
 		var second = bq;
 		el.insertBefore(second, par.previousElementSibling);
-		el.insertBefore(first, second);
+		if (first){
+			el.insertBefore(first, second);
+		}
 		return true;
 	} else {
 		return false;
