@@ -113,6 +113,7 @@ textarea {
     font-size: 16px;
     letter-spacing: 0.125px;
     font-weight: 400;
+    word-wrap: break-word;
 }
 body {
     text-transform: lowercase;
@@ -133,7 +134,6 @@ blockquote {
     border-bottom: 1px solid #777777;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    word-wrap: break-word;
 }
 table {
     border: 1px solid #404040;
