@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,800);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600italic,700);
 /* Minimal Theme designed by Artur Kim (http://arturkim.com) for Tumblr | version 1.5 */
 /* Modified heavily by thebombzen */
 /* RESET */
@@ -112,7 +112,7 @@ textarea {
     line-height: 1.25;
     font-size: 16px;
     letter-spacing: 0.125px;
-    font-weight: 400;
+    font-weight: 600;
 }
 body {
     text-transform: lowercase;
@@ -175,7 +175,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: 600;
+    font-weight: 700;
     clear: both;
 }
 img {
@@ -236,7 +236,7 @@ img.photo {
     border: 1px solid #404040;
     line-height: 20px;
     padding: 4px;
-    font-weight: 400;
+    font-weight: 600;
 }
 #header #search input.search-button {
     color: #0F4FFF;
@@ -256,7 +256,7 @@ img.photo {
 }
 #header h1 a {
     font-size: 80px;
-    font-weight: 600;
+    font-weight: 700;
     line-height: 100px;
     text-decoration: none;
 }
@@ -292,7 +292,7 @@ img.photo {
     float: left;
 }
 .post-meta .type a {
-    font-weight: 400;
+    font-weight: 600;
     padding: 0 10px 10px;
     text-decoration: underline;
     color: #0F4FFF;
@@ -311,7 +311,7 @@ img.photo {
 .post-content {
     padding: 30px 30px 60px;
     text-transform: initial;
-    font-weight: 300;
+    font-weight: 400;
 }
 .post-content div:last-child,
 .post-content div:last-child p,
@@ -323,7 +323,7 @@ img.photo {
 .post-content h3 {
     font-size: 20px;
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .post-content a {
     text-decoration: none;
@@ -379,7 +379,7 @@ img.photo {
 }
 .post-type-chat .post-content .label {
     /*color: #FFFFFF;*/
-    font-weight: 300;
+    font-weight: 400;
 }
 .post-type-video .post-content .video-wrap {
     background: #000000;
@@ -392,7 +392,7 @@ img.photo {
 }
 .tags {
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 600;
 }
 .tags a {
     text-decoration: none;
@@ -417,7 +417,7 @@ img.photo {
 #post-notes {
     border-top: 1px solid #404040;
     padding: 30px;
-    font-weight: 300;
+    font-weight: 400;
 }
 #post-notes ol li {
     border-bottom: 1px dotted #404040;
@@ -454,7 +454,7 @@ img.photo {
     border-bottom: 1px dotted #404040;
     /*color: #FFFFFF;*/
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0 0 20px;
     padding: 9px 20px;
 }
@@ -503,7 +503,7 @@ img.photo {
 #about {
     overflow: hidden;
     /*color: #FFFFFF;*/
-    font-weight: 300;
+    font-weight: 400;
 }
 #about img {
     border 0px;
