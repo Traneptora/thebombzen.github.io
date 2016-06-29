@@ -6,8 +6,8 @@ function fixBlockQuote(bq){
 		var par = bq.parentElement;
 		var first = bq.previousElementSibling;
 		var second = bq;
-		el.insertBefore(first, par.previousElementSibling);		
 		el.insertBefore(second, par.previousElementSibling);
+		el.insertBefore(first, second);
 	}
 }
 document.addEventListener("DOMContentLoaded", function(){
