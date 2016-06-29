@@ -8,17 +8,23 @@ function fixBlockQuote(bq){
 		var second = bq;
 		el.insertBefore(second, par.previousElementSibling);
 		el.insertBefore(first, second);
+		return true;
+	} else {
+		return false;
 	}
 }
 document.addEventListener("DOMContentLoaded", function(){
 	var found = true;
+	do {
+		found = false;
+		var blockQuotes = document.getElementsByTagName("blockquote");
 
-	found = false;
-	var blockQuotes = document.getElementsByTagName("blockquote");
-
-	for (var i = 0; i < blockQuotes.length; i++){
-		var bq = blockQuotes[i];
-		fixBlockQuote(bq);
-	}
+		for (var i = 0; i < blockQuotes.length; i++){
+			var bq = blockQuotes[i];
+			if (fixBlockQuote(bq)){
+				found = true;
+			}
+		}
+	} while (found);
 });
 
