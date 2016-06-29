@@ -601,7 +601,7 @@ img.photo {
 }
 .tooltip img {
 	display: none;
-	position: relative;
+	position: absolute;
 }
 
 .tooltip:hover img {
