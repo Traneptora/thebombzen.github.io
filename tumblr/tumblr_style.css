@@ -253,6 +253,7 @@ img.photo {
     margin: 0 auto 3px;
     padding: 40px 0;
     width: 900px;
+    text-align: center;
 }
 #header h1 a {
     font-size: 80px;
