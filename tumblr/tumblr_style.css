@@ -603,6 +603,7 @@ img.photo {
 .tooltip img {
 	position: fixed;
 	z-index: 300;
+	visibility: visible;
 }
 
 .tooltip:hover img {
