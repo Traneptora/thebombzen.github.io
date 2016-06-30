@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
 	
 	var iconLink = document.createElement("link");
 	iconLink.rel = "icon";
-	iconLink.href = "http://leo.scruffohio.net/images/favicon.ico";	
+	iconLink.href = "/images/favicon.ico";	
 	
 	document.getElementsByTagName("head")[0].appendChild(iconLink);
 });
