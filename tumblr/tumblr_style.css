@@ -131,7 +131,7 @@ code {
     line-height: 20px;
 }
 blockquote {
-    border-bottom: 1px solid #777777;
+    /*border-bottom: 1px solid #777777;*/
     margin-bottom: 15px;
     padding-bottom: 5px;
 }
