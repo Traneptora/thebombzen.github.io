@@ -315,7 +315,7 @@ img.photo {
     padding: 0 10px;
 }
 .post-content {
-    padding: 30px 30px 60px;
+    padding: 30px 30px 30px;
     text-transform: initial;
     font-weight: 400;
 }
