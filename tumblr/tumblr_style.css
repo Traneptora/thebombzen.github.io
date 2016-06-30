@@ -178,14 +178,15 @@ h6 {
     font-weight: 700;
     clear: both;
 }
-img {
+
+.post-content img, #about img {
     padding: 5px;
     background: #000000;
     box-shadow: inset 0px 0px 3px 3px #777777;
 }
 
 #post-notes img {
-	padding: 0px;
+	margin-right: 10px;
 }
 
 a img:focus,
@@ -193,10 +194,7 @@ a img:hover,
 a img:active {
     background: #200090;
 }
-img.photo {
-    background: #000000;
-    box-shadow: inset 0px 0px 3px 3px #777777;
-}
+
 /* DEFAULT CSS */
 
 #header .menu {
@@ -431,8 +429,8 @@ img.photo {
 }
 #post-notes ol li img {
     background: none;
-    padding-right: 3px;
     vertical-align: middle;
+    margin-right: 5px;
 }
 .pagination {
     border-top: 1px solid #404040;
