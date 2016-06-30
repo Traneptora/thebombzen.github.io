@@ -183,6 +183,11 @@ img {
     background: #000000;
     box-shadow: inset 0px 0px 3px 3px #777777;
 }
+
+#post-notes img {
+	padding: 0px;
+}
+
 a img:focus,
 a img:hover,
 a img:active {
