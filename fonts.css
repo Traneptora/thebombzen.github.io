@@ -3,24 +3,20 @@
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light');
-  src: url('fonts/woff2/Open_Sans/OpenSans-Light.woff2') format('woff2');
-  src: url('fonts/eot/Open_Sans/OpenSans-Light.eot') format('embedded-opentype');
-  src: url('fonts/ttf/Open_Sans/OpenSans-Light.ttf') format('truetype');
-  src: url('fonts/svg/Open_Sans/OpenSans-Light.svg#OpenSans-Light') format('svg');
-  src: url(http://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTYnF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+  src: url('fonts/eot/Open_Sans/OpenSans-Light.eot');
+  src: url('fonts/eot/Open_Sans/OpenSans-Light.eot?#iefix') format('embedded-opentype'), 
+  	url('fonts/woff2/Open_Sans/OpenSans-Light.woff2') format('woff2'),
+  	url('fonts/ttf/Open_Sans/OpenSans-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), local('Open Sans'), local('OpenSans');
-  src: url('fonts/woff2/Open_Sans/OpenSans-Regular.woff2') format('woff2');
-  src: url('fonts/eot/Open_Sans/OpenSans-Regular.eot') format('embedded-opentype');
-  src: url('fonts/ttf/Open_Sans/OpenSans-Regular.ttf') format('truetype');
-  src: url('fonts/svg/Open_Sans/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
-  src: url(http://fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+  src: url('fonts/eot/Open_Sans/OpenSans-Regular.eot');
+  src: url('fonts/eot/Open_Sans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'), 
+  	url('fonts/woff2/Open_Sans/OpenSans-Regular.woff2') format('woff2'),
+  	url('fonts/ttf/Open_Sans/OpenSans-Regular.ttf') format('truetype');
 }
 
 @font-face {
