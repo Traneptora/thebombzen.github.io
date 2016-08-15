@@ -4,6 +4,9 @@
 body {
 	text-align: center;
 	background-color: #F8F8F8;
+	text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
 }
 
 body, textarea {
