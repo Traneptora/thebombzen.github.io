@@ -179,7 +179,7 @@ h6 {
     clear: both;
 }
 
-.post-content img, #about img {
+#about img {
     padding: 5px;
     background: #000000;
     box-shadow: inset 0px 0px 3px 3px #777777;
