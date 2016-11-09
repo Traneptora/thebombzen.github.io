@@ -614,3 +614,6 @@ a img:active {
 	visibility: visible;
 }
 
+.description {
+	margin-top: 0px;
+}
