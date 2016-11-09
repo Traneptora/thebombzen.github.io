@@ -58,13 +58,12 @@ function tumblrFixes(){
 	for (var i = 0; i < divs.length; i++){
 		var div = divs[i];
 		if (div.classList.contains("media-button") && div.classList.contains("media-killer") && div.classList.contains("icon_close")){
-			if (div.parentElement.nextSibling){
-				div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
+			if (div.parentElement.nextElementSibling){
+				div.parentElement.parentElement.removeChild(div.parentElement.nextElementSibling);
 			}
 			div.parentElement.removeChild(div);
 		}
 	}
 }
 
-
-$(document).on('ready', tumblrFixes);
+document.addEventListener("DOMContentLoaded", tumblrFixes);
