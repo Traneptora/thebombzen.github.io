@@ -9,7 +9,7 @@ function fixBlockQuote(bq){
 		if (atag && atag.tagName.toLowerCase() === "a") {
 			var uname = atag.innerHTML; 
 			var mat = atag.href.match(/^https?:\/\/(.*)\.tumblr\.com\/post\//);
-			if (uname === mat[1]){
+			if (mat && mat[1] && uname === mat[1]){
 				if (!atag.classList.contains("tumblr_blog")){
 					atag.classList.add("tumblr_blog");
 				}
