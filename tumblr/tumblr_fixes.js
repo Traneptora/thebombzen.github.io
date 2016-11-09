@@ -58,19 +58,11 @@ function tumblrFixes(){
 	for (var i = 0; i < divs.length; i++){
 		var div = divs[i];
 		if (div.classList.contains("media-button") && div.classList.contains("media-killer") && div.classList.contains("icon_close")){
-			div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
+			if (div.parentElement.nextSibling){
+				div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
+			}
 			div.parentElement.removeChild(div);
 		}
-		/*if (div.className.toLowerCase() === "html_photoset"){
-			var iframe = div.getElementsByTagName("iframe")[0];
-			iframe.style.height = "100%";
-			var fn = function(){
-				div.style.height = (iframe.contentDocument || iframe.contentWindow.document).getElementsByTagName("html")[0].scrollHeight + "px";
-			};
-			$(iframe).on('ready', fn);
-			$(iframe).on('load', fn);
-			fn();
-		}*/
 	}
 }
 
