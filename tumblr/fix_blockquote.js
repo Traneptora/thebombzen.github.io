@@ -12,6 +12,7 @@ function fixBlockQuote(bq){
 				if (first){
 					el.insertBefore(first, second);
 				}
+				bq.style.borderBottom = "1px";
 				return true;
 			} else {
 				return false;
