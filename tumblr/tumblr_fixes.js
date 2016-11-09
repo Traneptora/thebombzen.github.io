@@ -64,9 +64,11 @@ function tumblrFixes(){
 		if (div.className.toLowerCase() === "html_photoset"){
 			var iframe = div.getElementsByTagName("iframe")[0];
 			iframe.style.height = "100%";
-			iFrameReady(iframe, function(){
+			var fn = function(){
 				div.style.height = (iframe.contentDocument || iframe.contentWindow.document).getElementsByTagName("html")[0].scrollHeight + "px";
-			});
+			};
+			iFrameReady(iframe, fn);
+			fn();
 		}
 	}
 }
