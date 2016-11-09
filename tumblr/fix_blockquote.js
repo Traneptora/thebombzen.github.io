@@ -3,7 +3,7 @@ function fixBlockQuote(bq){
 	if (ptag && ptag.firstElementChild){
 		var atag = ptag.firstElementChild;
 		
-		if (atag) {
+		if (atag && atag.tagName === "a") {
 			var uname = atag.innerHTML; 
 			var mat = atag.href.match(/^https?:\/\/(.*)\.tumblr\.com\/post\//);
 			if (uname === mat[1]){
