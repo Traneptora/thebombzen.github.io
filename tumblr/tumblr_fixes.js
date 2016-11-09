@@ -61,7 +61,7 @@ function tumblrFixes(){
 			div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
 			div.parentElement.removeChild(div);
 		}
-		if (div.className.toLowerCase() === "html_photoset"){
+		/*if (div.className.toLowerCase() === "html_photoset"){
 			var iframe = div.getElementsByTagName("iframe")[0];
 			iframe.style.height = "100%";
 			var fn = function(){
@@ -70,7 +70,7 @@ function tumblrFixes(){
 			$(iframe).on('ready', fn);
 			$(iframe).on('load', fn);
 			fn();
-		}
+		}*/
 	}
 }
 
