@@ -2,21 +2,29 @@ function fixBlockQuote(bq){
 	var ptag = bq.previousElementSibling;
 	if (ptag && ptag.firstElementChild){
 		var atag = ptag.firstElementChild;
-		if (atag.className.toLowerCase() === "tumblr_blog") {
-			bq.style.borderBottom = "1px solid #000000";
-			if (bq.parentElement.tagName.toLowerCase() === "blockquote"){
-				fixBlockQuote(bq.parentElement);
-				var el = bq.parentElement.parentElement;
-				var par = bq.parentElement;
-				var first = bq.previousElementSibling;
-				var second = bq;
-				el.insertBefore(second, par.previousElementSibling);
-				if (first){
-					el.insertBefore(first, second);
+		
+		if (atag) {
+			var uname = atag.innerHTML; 
+			var mat = atag.href.match(/^https?:\/\/(www.)?(.*).tumblr.com\/post\//));
+			if (uname === mat[2]){
+				if (!atag.classList.contains("tumblr_blog")){
+					atag.classList.add("tumblr_blog");
 				}
-				return true;
-			} else {
-				return false;
+				bq.style.borderBottom = "1px solid #000000";
+				if (bq.parentElement.tagName.toLowerCase() === "blockquote"){
+					fixBlockQuote(bq.parentElement);
+					var el = bq.parentElement.parentElement;
+					var par = bq.parentElement;
+					var first = bq.previousElementSibling;
+					var second = bq;
+					el.insertBefore(second, par.previousElementSibling);
+					if (first){
+						el.insertBefore(first, second);
+					}
+					return true;
+				} else {
+					return false;
+				}
 			}
 		} else {
 			return false;
