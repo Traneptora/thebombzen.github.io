@@ -18,9 +18,13 @@ function fixBlockQuote(bq){
 					fixBlockQuote(bq.parentElement);
 					var el = bq.parentElement.parentElement;
 					var par = bq.parentElement;
-					var first = bq.previousElementSibling;
+					var toIns = par.prevElementSibling;
+					while (toIns.tagName.toLowerCase() === "xkit"){
+						toIns = toIns.prevElementSibling;					
+					}
+					var first = ptag;
 					var second = bq;
-					el.insertBefore(second, par.previousElementSibling);
+					el.insertBefore(second, toIns);
 					if (first){
 						el.insertBefore(first, second);
 					}
