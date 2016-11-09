@@ -7,7 +7,7 @@ function tumblrFixes(){
 			div.parentElement.removeChild(div);
 		}
 	}
-	if (div.className.toLowerCase().equals("html_photoset")){
+	if (div.className.toLowerCase() === "html_photoset"){
 		var iframe = div.getElementsByTagName("iframe")[0];
 		iframe.style.height = "100%";
 		div.style.height = iframe.contentDocument.getElementsByTagName("html")[0].scrollHeight + "px";
