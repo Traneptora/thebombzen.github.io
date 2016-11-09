@@ -1,7 +1,8 @@
 function fixBlockQuote(bq){
 	if (bq.parentElement.tagName.toLowerCase() === "blockquote"){
-		var atag = bq.parentElement.firstElementChild.firstElementChild;
-		if (atag){
+		var ptag = bq.previousElementSibling;
+		if (ptag && ptag.firstElementChild){
+			var atag = ptag.firstElementChild;
 			if (atag.className.toLowerCase() === "tumblr_blog") {
 				fixBlockQuote(bq.parentElement);
 				var el = bq.parentElement.parentElement;
@@ -12,7 +13,7 @@ function fixBlockQuote(bq){
 				if (first){
 					el.insertBefore(first, second);
 				}
-				bq.style.borderBottom = "1px";
+				second.style.borderBottom = "1px";
 				return true;
 			} else {
 				return false;
