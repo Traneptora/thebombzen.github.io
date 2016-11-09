@@ -65,7 +65,7 @@ function tumblrFixes(){
 			var iframe = div.getElementsByTagName("iframe")[0];
 			iframe.style.height = "100%";
 			iFrameReady(iframe, function(){
-				div.style.height = this.contentDocument.getElementsByTagName("html")[0].scrollHeight + "px";
+				div.style.height = (iframe.contentDocument || iframe.contentWindow.document).getElementsByTagName("html")[0].scrollHeight + "px";
 			});
 		}
 	}
