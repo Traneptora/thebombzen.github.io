@@ -18,9 +18,9 @@ function fixBlockQuote(bq){
 					fixBlockQuote(bq.parentElement);
 					var el = bq.parentElement.parentElement;
 					var par = bq.parentElement;
-					var toIns = par.prevElementSibling;
+					var toIns = par.previousElementSibling;
 					while (toIns.tagName.toLowerCase() === "xkit"){
-						toIns = toIns.prevElementSibling;					
+						toIns = toIns.previousElementSibling;					
 					}
 					var first = ptag;
 					var second = bq;
