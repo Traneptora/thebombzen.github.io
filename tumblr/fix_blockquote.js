@@ -1,5 +1,8 @@
 function fixBlockQuote(bq){
 	var ptag = bq.previousElementSibling;
+	while (ptag && ptag.tagName.toLowerCase() === "xkit"){
+		ptag = ptag.previousElementSibling;
+	}
 	if (ptag && ptag.firstElementChild){
 		var atag = ptag.firstElementChild;
 		
