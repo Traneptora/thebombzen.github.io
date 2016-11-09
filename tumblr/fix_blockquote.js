@@ -13,7 +13,7 @@ function fixBlockQuote(bq){
 				if (first){
 					el.insertBefore(first, second);
 				}
-				second.style.borderBottom = "1px";
+				second.style.borderBottom = "1px solid #000000";
 				return true;
 			} else {
 				return false;
