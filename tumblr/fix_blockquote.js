@@ -5,8 +5,8 @@ function fixBlockQuote(bq){
 		
 		if (atag) {
 			var uname = atag.innerHTML; 
-			var mat = atag.href.match(/^https?:\/\/(www.)?(.*).tumblr.com\/post\//);
-			if (uname === mat[2]){
+			var mat = atag.href.match(/^https?:\/\/(.*)\.tumblr\.com\/post\//);
+			if (uname === mat[1]){
 				if (!atag.classList.contains("tumblr_blog")){
 					atag.classList.add("tumblr_blog");
 				}
