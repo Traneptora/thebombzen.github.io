@@ -6,11 +6,11 @@ function tumblrFixes(){
 			div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
 			div.parentElement.removeChild(div);
 		}
-	}
-	if (div.className.toLowerCase() === "html_photoset"){
-		var iframe = div.getElementsByTagName("iframe")[0];
-		iframe.style.height = "100%";
-		div.style.height = iframe.contentDocument.getElementsByTagName("html")[0].scrollHeight + "px";
+		if (div.className.toLowerCase() === "html_photoset"){
+			var iframe = div.getElementsByTagName("iframe")[0];
+			iframe.style.height = "100%";
+			div.style.height = iframe.contentDocument.getElementsByTagName("html")[0].scrollHeight + "px";
+		}
 	}
 }
 
