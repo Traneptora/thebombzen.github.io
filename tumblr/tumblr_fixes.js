@@ -67,11 +67,12 @@ function tumblrFixes(){
 			var fn = function(){
 				div.style.height = (iframe.contentDocument || iframe.contentWindow.document).getElementsByTagName("html")[0].scrollHeight + "px";
 			};
-			$(iframe).load(fn);
+			$(iframe).on('ready', fn);
+			$(iframe).on('load', fn);
 			fn();
 		}
 	}
 }
 
 
-$(document).ready(tumblrFixes);
+$(document).on('ready', tumblrFixes);
