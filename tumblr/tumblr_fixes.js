@@ -3,7 +3,7 @@ function tumblrFixes(){
 	for (var i = 0; i < divs.length; i++){
 		var div = divs[i];
 		if (div.classList.contains("media-button") && div.classList.contains("media-killer") && div.classList.contains("icon_close")){
-			div.parentElement.removeChild(div.nextElementSibling);
+			div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
 			div.parentElement.removeChild(div);
 		}
 	}
