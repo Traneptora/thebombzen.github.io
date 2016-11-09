@@ -41,9 +41,9 @@ document.addEventListener("DOMContentLoaded", function(){
 
 		for (var i = 0; i < blockQuotes.length; i++){
 			var bq = blockQuotes[i];
-			/*if (fixBlockQuote(bq)){
+			if (fixBlockQuote(bq)){
 				found = true;
-			}*/
+			}
 		}
 	} while (found);
 });

@@ -61,13 +61,13 @@ function tumblrFixes(){
 			div.parentElement.parentElement.removeChild(div.parentElement.nextSibling);
 			div.parentElement.removeChild(div);
 		}
-		/*if (div.className.toLowerCase() === "html_photoset"){
+		if (div.className.toLowerCase() === "html_photoset"){
 			var iframe = div.getElementsByTagName("iframe")[0];
 			iframe.style.height = "100%";
 			iFrameReady(iframe, function(){
 				this.parentElement.style.height = this.contentDocument.getElementsByTagName("html")[0].scrollHeight + "px";
 			});
-		}*/
+		}
 	}
 }
 
