@@ -64,6 +64,12 @@ function tumblrFixes(){
 			div.parentElement.removeChild(div);
 		}
 	}
+	var figures = document.getElementsByTagName("figure");
+	for (i = 0; i < figures.length; i++) {
+		if (figures[i].className.toLowerCase() === "tmblr-full"){
+			figures[i].style.margin = "1.5px -10px -20px -10px";
+		}
+	}
 }
 
 document.addEventListener("DOMContentLoaded", tumblrFixes);
