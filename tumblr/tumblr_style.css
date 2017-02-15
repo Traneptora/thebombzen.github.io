@@ -115,9 +115,9 @@ textarea {
     font-weight: 400;
     word-wrap: break-word;
 }
-body {
+/* body {
     text-transform: lowercase;
-}
+} */
 p,
 ul,
 ol,
