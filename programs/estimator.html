@@ -15,29 +15,6 @@
 	<meta property="og:description" content="A custom rating estimator for the USCF rating system.">
 	<script type="text/javascript" src="rating.js"></script>
 	<!--<script type="text/javascript" src="../contentloaded.js"></script>-->
-	<script type="text/javascript">
-	function calculateExpAndPerf() {
-		var r0s = [];
-		for (var j = 0; j < 12; j++){
-			var ra = +(document.getElementById("r"+j).value);
-			if (!isNaN(ra) && ra != 0){
-				r0s.push(ra);
-			}
-		}
-		var rating = 1.0 * document.getElementById("rating").value;
-		var exp = getMultiExpectancy(rating, r0s);
-		document.getElementById("exp").innerHTML = +(Math.round(exp + "e+3") + "e-3");
-		var score = 1.0 * document.getElementById("score").value;
-		var perf = getPerformance(score, r0s);
-		document.getElementById("perf").innerHTML = +(Math.round(perf + "e+3") + "e-3");
-		var postevent = getEstimatedPostEvent(rating, score, r0s);
-		document.getElementById("post").innerHTML = postevent;
-		var norm = getHighestNormEarned(score, r0s);
-		document.getElementById("norm").innerHTML = norm;
-		var kfactor = getK(rating, r0s.length);
-		document.getElementById("kfactor").innerHTML = +(Math.round(kfactor + "e+3") + "e-3");
-	}
-	</script>
 </head>
 <body>
 <div id="wrapper">
@@ -46,7 +23,7 @@
 	</div>
 	<hr>
 	This calculates your expectancy, performance, estimated post-event rating, and expected norm earned in a USCF dual-rated chess tournament. The advantage this has over the USCF's rating estimator is that this one shows your expectancy and your estimated norm earned. Unlike the <a href="quads.html">Quads Rating Estimator</a>, this one is not perfectly accurate and will tend to overestimate if you do particularly well and will tend to underestimate if you do particularly poorly.<br><br>
-	<form action="javascript:calculateExpAndPerf()">
+	<form action="javascript:est_calculateExpAndPerf()">
 		<div>
 			<div style="width: 40%;">
 				<div style="padding-top: 5px; padding-bottom: 5px;">

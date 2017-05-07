@@ -217,3 +217,25 @@ function quad_calculateEverything(){
 	quad_calcPerformances();
 	quad_calcPostEvents();
 }
+
+function est_calculateExpAndPerf() {
+	var r0s = [];
+	for (var j = 0; j < 12; j++){
+		var ra = +(document.getElementById("r"+j).value);
+		if (!isNaN(ra) && ra != 0){
+			r0s.push(ra);
+		}
+	}
+	var rating = 1.0 * document.getElementById("rating").value;
+	var exp = getMultiExpectancy(rating, r0s);
+	document.getElementById("exp").innerHTML = +(Math.round(exp + "e+3") + "e-3");
+	var score = 1.0 * document.getElementById("score").value;
+	var perf = getPerformance(score, r0s);
+	document.getElementById("perf").innerHTML = +(Math.round(perf + "e+3") + "e-3");
+	var postevent = getEstimatedPostEvent(rating, score, r0s);
+	document.getElementById("post").innerHTML = postevent;
+	var norm = getHighestNormEarned(score, r0s);
+	document.getElementById("norm").innerHTML = norm;
+	var kfactor = getK(rating, r0s.length);
+	document.getElementById("kfactor").innerHTML = +(Math.round(kfactor + "e+3") + "e-3");
+}
