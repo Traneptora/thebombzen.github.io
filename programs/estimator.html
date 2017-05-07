@@ -1,32 +1,42 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>Rating Estimator</title>
-<link rel="stylesheet" href="../styles.css">
-<script type="text/javascript" src="rating.js"></script>
-<script type="text/javascript" src="../contentloaded.js"></script>
-<script type="text/javascript">
-function calculateExpAndPerf() {
-	var r0s = [];
-	for (var j = 0; j < 12; j++){
-		var ra = +(document.getElementById("r"+j).value);
-		if (!isNaN(ra) && ra != 0){
-			r0s.push(ra);
+	<title>Rating Estimator</title>
+	<link rel="stylesheet" href="../styles.css">
+	<meta charset="UTF-8">
+	<meta name="description" content="Rating Estimator">
+	<meta name="keywords" content="Leo,Izen,Website,LeoIzen,thebombzen,bombzen,uscf,chess,rating,estimator,ratingestimator">
+	<meta name="author" content="Leo Izen" >
+	<meta property="og:image" content="https://thebombzen.github.io/images/saber_256.png">
+	<meta property="og:title" content="Rating Estimator">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://thebombzen.github.io/programs/estimator.html">
+	<meta property="og:description" content="A custom rating estimator for the USCF rating system.">
+	<script type="text/javascript" src="rating.js"></script>
+	<script type="text/javascript" src="../contentloaded.js"></script>
+	<script type="text/javascript">
+	function calculateExpAndPerf() {
+		var r0s = [];
+		for (var j = 0; j < 12; j++){
+			var ra = +(document.getElementById("r"+j).value);
+			if (!isNaN(ra) && ra != 0){
+				r0s.push(ra);
+			}
 		}
+		var rating = 1.0 * document.getElementById("rating").value;
+		var exp = getMultiExpectancy(rating, r0s);
+		document.getElementById("exp").innerHTML = +(Math.round(exp + "e+3") + "e-3");
+		var score = 1.0 * document.getElementById("score").value;
+		var perf = getPerformance(score, r0s);
+		document.getElementById("perf").innerHTML = +(Math.round(perf + "e+3") + "e-3");
+		var postevent = getEstimatedPostEvent(rating, score, r0s);
+		document.getElementById("post").innerHTML = postevent;
+		var norm = getHighestNormEarned(score, r0s);
+		document.getElementById("norm").innerHTML = norm;
+		var kfactor = getK(rating, r0s.length);
+		document.getElementById("kfactor").innerHTML = +(Math.round(kfactor + "e+3") + "e-3");
 	}
-	var rating = 1.0 * document.getElementById("rating").value;
-	var exp = getMultiExpectancy(rating, r0s);
-	document.getElementById("exp").innerHTML = +(Math.round(exp + "e+3") + "e-3");
-	var score = 1.0 * document.getElementById("score").value;
-	var perf = getPerformance(score, r0s);
-	document.getElementById("perf").innerHTML = +(Math.round(perf + "e+3") + "e-3");
-	var postevent = getEstimatedPostEvent(rating, score, r0s);
-	document.getElementById("post").innerHTML = postevent;
-	var norm = getHighestNormEarned(score, r0s);
-	document.getElementById("norm").innerHTML = norm;
-	var kfactor = getK(rating, r0s.length);
-	document.getElementById("kfactor").innerHTML = +(Math.round(kfactor + "e+3") + "e-3");
-}
-</script>
+	</script>
 </head>
 <body>
 <div id="wrapper">
@@ -83,13 +93,13 @@ function calculateExpAndPerf() {
 	<hr>
 	Norm key:
 	<ul>
-	<li>S: Life Senior Master, 2400</li>
-	<li>M: Life Master, 2200</li>
-	<li>C: Candidate Master, 2000</li>
-	<li>1: 1st Category, 1800</li>
-	<li>2: 2nd Category, 1600</li>
-	<li>3: 3rd Category, 1400</li>
-	<li>4: 4th Category, 1200</li>
+		<li>S: Life Senior Master, 2400</li>
+		<li>M: Life Master, 2200</li>
+		<li>C: Candidate Master, 2000</li>
+		<li>1: 1st Category, 1800</li>
+		<li>2: 2nd Category, 1600</li>
+		<li>3: 3rd Category, 1400</li>
+		<li>4: 4th Category, 1200</li>
 	</ul>
 	<hr>
 	<div id="footer" class="home-page"><a href="../index.html">Home Page</a></div>
