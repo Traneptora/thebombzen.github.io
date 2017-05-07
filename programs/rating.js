@@ -116,8 +116,9 @@ function getEstimatedPostEvent(rating, score, r0s){
 	var extra = getK(rating, r0s.length) * (score - exp);
 	var bonus = 0.0;
 	var mp = +Math.max(r0s.length, 4);
-	if (r0s.length >= 3 && extra > 12 * Math.sqrt(mp)){
-		bonus = extra - 12 * Math.sqrt(mp);
+	const B = 14; // As of May 1, 2017
+	if (r0s.length >= 3 && extra > B * Math.sqrt(mp)){
+		bonus = extra - B * Math.sqrt(mp);
 	}
 	var newR = rating + extra + bonus;
 	if (newR < 100){
