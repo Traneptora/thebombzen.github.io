@@ -130,3 +130,90 @@ function getEstimatedPostEvent(rating, score, r0s){
 		return Math.floor(newR);	
 	}
 }
+
+function quad_calcExpectancies(){
+	var r0s = [0, 0, 0, 0];
+	for (var j = 0; j < 4; j++){
+		r0s[j] = +(document.getElementById("preevent"+j).value);
+	}
+	for (var i = 0; i < 4; i++){
+		var exp = 0;
+		for (var j = 0; j < 4; j++){
+			if (j == i) continue;
+			exp += getExpectancy(r0s[i], r0s[j]);
+		}
+		exp = +(Math.round(exp + "e+3")  + "e-3");
+		document.getElementById("exp"+i).innerHTML = exp;
+	}
+}
+
+function quad_calcPerformances(){
+	var r0s = [0, 0, 0, 0];
+	for (var j = 0; j < 4; j++){
+		r0s[j] = +(document.getElementById("preevent"+j).value);
+	}
+	var s0s = [0, 0, 0, 0];
+	for (var j = 0; j < 4; j++){
+		s0s[j] = +(document.getElementById("score"+j).value);
+	}
+	document.getElementById("perf0").innerHTML = getTriplePerformance(s0s[0], r0s[1], r0s[2], r0s[3]);
+	document.getElementById("perf1").innerHTML = getTriplePerformance(s0s[1], r0s[0], r0s[2], r0s[3]);
+	document.getElementById("perf2").innerHTML = getTriplePerformance(s0s[2], r0s[0], r0s[1], r0s[3]);
+	document.getElementById("perf3").innerHTML = getTriplePerformance(s0s[3], r0s[0], r0s[1], r0s[2]);
+}
+
+function quad_calcPostEvents(){
+	var r0s = [0, 0, 0, 0];
+	for (var j = 0; j < 4; j++){
+		r0s[j] = +(document.getElementById("preevent"+j).value);
+	}
+	var s0s = [0, 0, 0, 0];
+	for (var j = 0; j < 4; j++){
+		s0s[j] = +(document.getElementById("score"+j).value);
+	}
+	var r1s = [0, 0, 0, 0];
+	for (var i = 0; i < 4; i++){
+		var exp = 0;
+		for (var j = 0; j < 4; j++){
+			if (i == j) continue;
+			exp += getExpectancy(r0s[i], r0s[j]);
+		}
+		var extra = getK(r0s[i], 3) * (s0s[i] - exp);
+		var bonus = 0;
+		if (extra > 20){
+			bonus = extra - 20;
+		}
+		r1s[i] = r0s[i] + extra + bonus;
+		if (r1s[i] < 100){
+			r1s[i] = 100;
+		}
+	}
+	for (var i = 0; i < 4; i++){
+		var exp = 0;
+		for (var j = 0; j < 4; j++){
+			if (i == j) continue;
+			exp += getExpectancy(r0s[i], r1s[j]);
+		}
+		var extra = getK(r0s[i], 3) * (s0s[i] - exp);
+		var bonus = 0;
+		if (extra > 20){
+			bonus = extra - 20;
+		}
+		var est = r0s[i] + extra + bonus;
+		if (est < r0s[i]){
+			est = Math.floor(est);		
+		} else {
+			est = Math.ceil(est);
+		}
+		if (est < 100){
+			est = 100;
+		}
+		document.getElementById("est"+i).innerHTML = est;
+	}
+}
+
+function quad_calculateEverything(){
+	quad_calcExpectancies();
+	quad_calcPerformances();
+	quad_calcPostEvents();
+}
