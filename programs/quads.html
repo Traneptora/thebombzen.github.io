@@ -2,9 +2,19 @@
 <html>
 <head>
 <title>Quad Caclulator</title>
-<link rel="stylesheet" href="../styles.css">
-<script type="text/javascript" src="rating.js"></script>
-<script type="text/javascript" src="../contentloaded.js"></script>
+	<link rel="stylesheet" href="../styles.css">
+	<link rel="icon" href="/images/favicon.ico">
+	<meta charset="UTF-8">
+	<meta name="description" content="Quad Calculator">
+	<meta name="keywords" content="Leo,Izen,Website,LeoIzen,thebombzen,bombzen,uscf,chess,rating,estimator,ratingestimator,quad,calculator,quadcalulator">
+	<meta name="author" content="Leo Izen">
+	<meta property="og:image" content="https://thebombzen.github.io/images/saber_256.png">
+	<meta property="og:title" content="Quad Calculator">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://thebombzen.github.io/programs/quads.html">
+	<meta property="og:description" content="A post-event quads rating calculator for the USCF rating system.">
+	<script type="text/javascript" src="rating.js"></script>
+<!--<script type="text/javascript" src="../contentloaded.js"></script>-->
 <script type="text/javascript" >
 function calculateEverything(){
 	calcExpectancies();
@@ -223,11 +233,11 @@ function calcPostEvents(){
 	</form><hr>
 	This estimator makes some assumptions and if they all hold, it's dead accurate:
 	<ul>
-	<li>The event is dual-rated, which means it has a time control between G/30 and G/60;d5. This only matters if a player is near 2200 rating.</li>
-	<li>Every player enters with a rating. Nobody's unrated.</li>
-	<li>Every player has played at least 9 games before.</li>
-	<li>No player has won or lost every previous game he/she has played.</li>
-	<li>Every player has played enough previous games for their rating to be well-established enough. (This will always be the case with 50 prior games or more.)</li>
+		<li>The event is dual-rated, which means it has a time control between G/30 and G/60;d5. This only matters if a player is near 2200 rating.</li>
+		<li>Every player enters with a rating. Nobody's unrated.</li>
+		<li>Every player has played at least 9 games before.</li>
+		<li>No player has won or lost every previous game he/she has played.</li>
+		<li>Every player has played enough previous games for their rating to be "well-established enough." (This will always be the case with 50 prior games or more.)</li>
 	</ul>
 	<hr>
 	<div id="footer" class="home-page"><a href="../index.html">Home Page</a></div>
