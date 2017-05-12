@@ -13,7 +13,7 @@
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://thebombzen.github.io/articles/memetext/tutorial-memetext.html">
 	<meta property="og:description" content="A tutorial on creating MEME-like images in GIMP.">
-	<script type="text/javascript" src="rating.js"></script>
+	<script src="../../scripts/flif.js"></script>
 </head>
 <body>
 <article id="wrapper">
@@ -33,12 +33,12 @@
 		<section>
 		<h3>Laying the original text</h3>
 		<p>Open GIMP, and then open the image on which you want to overlay your meme-style text. (You do have to decide this first, otherwise you'll go nowhere.) You're going to be using a few window panels, so hit Ctrl+B to open the toolbox and Ctrl+L to open the layers panel. I don't know what the shortcuts are on macOS, but I do know that on all platforms you can also do <i>Windows → New Toolbox</i> to open a toolbox and <i>Windows → Dockable Dialogs → Layers</i> to open the layers panel. You should see something like this: </p>
-		<p style="text-align: center;"><img src="shot1.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot1.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot1.flif"></canvas></p>
 		<p>If you want to follow along with the same image I used, <a href="original-background.png">you can access the original background image here.</a></p>
 		<p>Now, we're going to click the &ldquo;A&rdquo; icon in our toolbox to select the text tool. (You can also hit 'T' as the keyboard shortcut to select this tool.) Type the phrase you want to overlay into the box. It will be gross and small and this is not a surprise. The phrase I chose for this tutorial is "When you tell a bad pun and everyone does this, this means you have won." Here's what it might look like:</p>
-		<p style="text-align: center;"><img src="shot2.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot2.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot2.flif"></canvas></p>
 		<p>First let's change the font to something that we actually want to use. I'm going to use Impact Condensed right now and I'll explain a bit about the fonts later. To do this, we're going to doubleclick on the text tool icon to open the Tool Options dialog box. Then, we'll pick the right typeface. I've pointed to five important options that you should look at. Either way, with the text tool selected, highlight the entire selection, and then change a few of the options.</p>
-		<p style="text-align: center;"><img src="shot3.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot3.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot3.flif"></canvas></p>
 		<p>These are what you want to set the options to:
 		<ul>
 			<li>Font: Impact Condensed. If you're going to use this you should also use entirely uppercase letters. More about fonts later.</li>
@@ -48,30 +48,30 @@
 			<li>Alignment: I prefer center alignment for multi-line captions, but you can choose which one looks the best (usually center, sometimes left).</li>
 		</ul>
 		It will look like this, which is much better:</p>
-		<p style="text-align: center;"><img src="shot4.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot4.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot4.flif"></canvas></p>
 		<p>I also ended up adding an extra newline. You can modify the text at any point along the way; it's not like anyone's stopping you. Anyway, the next step is to position the meme text. To do this, we're going to use the move tool. Doubleclick the move tool and then in the move tool options, select "Move the active layer." This setting causes the click-n-drag motion to move the layer that's currently active, whether or not we actually click <i>on</i> that layer. This is nice because we never actually want to drag the background image so it allows us to click-n-drag sloppily (i.e. it doesn't matter where we start).</p>
-		<p style="text-align: center;"><img src="shot5.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot5.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot5.flif"></canvas></p>
 		<p>You might find out after you move the text that your spacing and newlines are off. This is what happened with me, actually. I ended up removing the newline between the first two lines. As for how you're supposed to position the text in the center, just eyeball it. Nobody will notice if you're off by a small amount. This is what I ended up getting for this particular example.</p>
-		<p style="text-align: center;"><img src="shot6.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot6.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot6.flif"></canvas></p>
 		<p>It's more important that the text fits well in with the background than that it's perfectly center so feel free to nudge it a bit to get it to look better.</p>
 		</section>
 		<section>
 		<h3>Working the magic</h3>
 		<p>Now we're going to make some sparks fly. Head over to the layers panel and right click on the text layer that we've made, and click <i>Alpha To Selection</i>. This will select everything that isn't transparent, which is basically just the outline of the text.</p>
-		<p style="text-align: center;"><img src="shot7.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot7.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot7.flif"></canvas></p>
 		<p>Now, go to <i>Select → Grow</i> in the select menu to grow the selection. In my screenshot you see the Shift+Ctrl+G keyboard shortcut but that's one I added myself. You won't have it, and you'll have to go through the menus.</p>
-		<p style="text-align: center;"><img src="shot8.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot8.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot8.flif"></canvas></p>
 		<p>You see here that I grew my selection by 6. This is because 6 is one-twelfth of the font size I used, which was 72. This is why it's nice to have a multiple of 12 as your font size, because 1/12 of the font size is a good rule of thumb on how much to grow the selection. As with most of the numbers here, you don't have to use 1/12 of the font size, and sometimes you don't want to, but it's a good rule of thumb. If it looks too big or too small then you can always undo and try again with a smaller or larger value. (Note that the amount you grow it by is going to be an integer. If you enter a fractional value it'll convert it to an integer so you should enter an integer in anyway.)</p>
 		<p>Now, we're going to make a new transparent layer. Hit the rectangle icon in the lower left of the layer's panel, or hit Ctrl+Shift+N to create a new layer. It'll pop up a dialog. It doesn't matter what it's called and the default size will be correct, and it <i>should</i> have transparency selected by default, but you should doublecheck to be safe. Click <i>OK</i>.</p>
-		<p style="text-align: center;"><img src="shot9.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot9.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot9.flif"></canvas></p>
 		<p>The layer might end up above everything. If so, click and drag the layer in the layer's panel so it's between the text and the background. It must be between the two of them. The middle layer must also be the active layer, so click on it to select it.</p>
-		<p style="text-align: center;"><img src="shot10.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot10.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot10.flif"></canvas></p>
 		<p>Now, select the paintbucket tool and make sure that the primary color you're painting is Black. I've highlighted the paintbucket tool (alternatively, hit Shift+B) and the color palette in red to make them easy to find:</p>
-		<p style="text-align: center;"><img src="shot11.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot11.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot11.flif"></canvas></p>
 		<p>Now, all we have to do is paint the selection with the paintbucket tool. When you paint the selection, you'll notice that the dashed animated border thing is still there. You can go to <i>Select → None</i> or hit Ctrl+Shift+A to delesect everything as a preview. If you want to reselect it, you can Undo (<i>Edit → Undo</i> or Ctrl+Z) because selection changes go into the undo log as well. This is what mine looks like:</p>
-		<p style="text-align: center;"><img src="shot12.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot12.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot12.flif"></canvas></p>
 		<p>Notably, the border size of 6 is far too small, and the text size is too small. This is something that might happen. I tried again with a text size of 90 and a border size of 12, and it looks much better:</p>
-		<p style="text-align: center;"><img src="shot13.jpg"></p>
+		<p style="text-align: center;"><noscript><img src="shot13.jpg"></canvas></p>
 		<p>The size was off because my rule of thumb is not based on Impact Condensed. It's based on Open Sans Semibold. Let's look at font choices.</p>
 		</section>
 		<section>
@@ -116,7 +116,7 @@
 		</ul></p>
 		<h4>PNG options</h4>
 		<p>PNG (Portable Network Graphics) is a lossless image format. It's supported everywhere. Lossless is good because it has no loss (duh), but it's bad in that the files will be larger than JPEGs. Before you just assume you should use PNG for everything because "JPEG looks like crap," you might not have noticed but the last two images above this line of text are JPEGs, and you really should consider exporting images as JPEG. If you ignore this warning and default to PNG for everything you'll end up with several-megabyte images rather than several-hundred-kilobyte images, and those megabytes matter, <i>especially</i> on mobile where people are using slow cellular internet. Anyway, let's look at the PNG export options.</p>
-		<p style="text-align: center;"><img src="shot15.png"></p>
+		<p style="text-align: center;"><noscript><img src="shot15.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot15.flif"></canvas></p>
 		<p>About the various options:
 			<ul>
 				<li>Adam7 Interlacing - If you turn this on, it'll allow the PNG to be loaded progressively, but the filesize will be larger because the image will lose compressibility. I generally don't think it's worth it. I'd leave it off. If you care about the ability to load the image progressively then I'd just use a progressive JPEG, to be honest.</li>
@@ -133,11 +133,11 @@
 		<h4>JPEG options</h4>
 		<p>JPEG is a lossy image format. It's supported everywhere. Lossy images sound bad because of the loss of data but you can achieve a filesize that's much smaller than anything achievable through lossless means. JPEGs are famous for being terrible, but they're really not. If you couldn't tell, I like using JPEGs over PNGs for this sort of image. They're not useful for everything but I really think people don't take it seriously enough, especially since JPEG doesn't work now like it did in the late 1990s. People say "JPEGs look terrible" and they're only somewhat right.</p>
 		<p>One thing JPEG images are famous for is <i>Macroblocking</i>, which is the blockiness created when you turn the quality way down:</p>
-		<p style="text-align: center;"><img src="macroblocking-cat.png"></p>
+		<p style="text-align: center;"><noscript><img src="macroblocking-cat.png"></noscript><canvas width="0" height="0" data-polyflif-src="macroblocking-cat.flif"></canvas></p>
 		<p>Let me be straight, <b>macroblocking will not be a problem for us.</b> It's a characteristic problem of <i>low</i>-quality JPEGs. Another artifact that JPEG images are famous for is the fuzziness that occurs near sharp boundaries, such as text. This is called <i>Ringing:</i></p>
-		<p style="text-align: center;"><img src="ringing-life.png"></p>
+		<p style="text-align: center;"><noscript><img src="ringing-life.png"></noscript><canvas width="0" height="0" data-polyflif-src="ringing-life.flif"></canvas></p>
 		<p>This is another thing that you won't really have to worry about, i.e. <b>ringing will not be a problem for us.</b> Ringing is a characteristic problem of <i>mid</i>-quality JPEGs. We're going to be using high quality JPEGs, and now that I've stifled your fears, let's actually get to the JPEG export settings.</p>
-		<p style="text-align: center;"><img src="shot16.png"></p>
+		<p style="text-align: center;"><<noscript><img src="shot16.png"></noscript><canvas width="0" height="0" data-polyflif-src="shot16.flif"></canvas></p>
 		<p>About the various options:
 			<ul>
 				<li>Quality - set this to 95 or higher. I prefer to set it to 95. Many people like to use 90 but when it's that low, ringing artifacts can start to emerge. To me, 100 is unnecessarily high for most images although for others it can help.</li>
@@ -155,7 +155,7 @@
 		<h3>Final Images</h3>
 		<p>Here's the final image. You can view the <a href="final-1080.jpg">JPEG (191 kB)</a> or the <a href="final-1080.png">PNG (1.1 MB)</a> by clicking the links, or you could view the embedding below.</p>
 		<p style="text-align: center;"><img class="shadow" src="final-1080.jpg" width="100%"></p>
-		<p><div style="display: inline-block; width: 75%; vertical-align: middle;"><div style="float: left; font-size: 24px;">Thank you for reading. This is my first exhaustive tutorial, and I hope it was helpful in <i>some</i> way, even if it was a bit long. Until next time, thebombzen out.</div></div><div style="display: inline-block; width: 25%; vertical-align: middle;""><div style="float: right; width: 100%; text-align: right;"><img class="shadow" src="../../images/saber_128.png"></div></p>
+		<p><div style="display: inline-block; width: 75%; vertical-align: middle;"><div style="float: left; font-size: 24px;">Thank you for reading. This is my first exhaustive tutorial, and I hope it was helpful in <i>some</i> way, even if it was a bit long. Until next time, thebombzen out.</div></div><div style="display: inline-block; width: 25%; vertical-align: middle;""><div style="float: right; width: 100%; text-align: right;"><noscript><img src="saber_128.png"></noscript><canvas width="0" height="0" data-polyflif-src="saber_128.flif"></canvas></div></p>
 	</div>
 	<hr>
 	<div id="footer" class="home-page"><a href="../../index.html">Home Page</a></div>
