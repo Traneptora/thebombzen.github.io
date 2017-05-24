@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
-	var popupURL = "https://i.imgur.com/vsgZVV5.png";
+	var popupURL = "/images/konami_code.png";
 	var battler = document.createElement("div");
 	battler.style.position = "fixed";
 	battler.style.zIndex = 1;
