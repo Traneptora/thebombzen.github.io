@@ -375,6 +375,12 @@ a img:active {
     padding: 10px;
 }
 
+.html_photoset {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 540px;
+}
+
 .post-type-link .post-content .link-wrap {
     margin-bottom: 20px;
 }
