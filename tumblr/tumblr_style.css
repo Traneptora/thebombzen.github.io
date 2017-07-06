@@ -558,6 +558,12 @@ a img:active {
 .like_post blockquote:last-child {
     margin-bottom: 0;
 }
+
+.tmblr-attribution {
+	margin-top: -20px;
+	margin-bottom: 20px;
+}
+
 #tweets {
     margin-bottom: 10px;
 }
