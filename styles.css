@@ -104,6 +104,10 @@ a img:active {
 	background: #D0E000;
 }
 
+code {
+	display: inline-block;
+}
+
 .tabledisplay {
 	padding-top: 5px;
 	padding-bottom: 5px;
