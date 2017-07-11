@@ -21,7 +21,7 @@
 </head>
 <body>
 <article id="wrapper">
-	<div id="maintitle">Creating Meme Images in GIMP</div>
+	<div id="maintitle">Creating Meme Images in GIMP (Rev. 2)</div>
 	<hr>
 	<div>
 		<section>
@@ -123,41 +123,41 @@
 		<p style="text-align: center;"><img src="shot15.png"></p>
 		<p>About the various options:
 			<ul>
-				<li>Adam7 Interlacing - If you turn this on, it'll allow the PNG to be loaded progressively, but the filesize will be larger because the image will lose compressibility. I generally don't think it's worth it. I'd leave it off. If you care about the ability to load the image progressively then I'd just use a progressive JPEG, to be honest.</li>
-				<li>Save Background Color - Leave this off. The background of the image is not visible for us, so we have no reason to save it.</li>
-				<li>Save Gamma - Leave this off. It's not a value that we care about, given that we digitally edited the image with very light and dark text.</li>
-				<li>Save Layer Offset - Leave this off. The largest layer (the background) fills the canvas perfectly so there's no reason to save it.</li>
-				<li>Save Resolution - I'd leave this on. Leaving it on will keep the value the source image if you had it in case it matters. If the original image didn't have resolution info then it'll probably save it as 72 pixels per inch, and most programs ignore this anyway so there isn't any real harm in doing this.</li>
-				<li>Save Creation Time - Up to you. Your filesystem will also track this, but having it in the image makes it more resilient and also slightly larger. Not a big deal either way.</li>
-				<li>Save Comment - Your Choice. My checkbox above is disabled because I didn't have an image comment. If you did then it's your choice.</li>
-				<li>Save Color Values from Transparent Pixels - Leave this off. In our case it doesn't actually matter because we have no transparent pixels, but you generally should leave this off unless you know why you want to leave it on.</li>
+				<li>Adam7 Interlacing - If you turn this on, it'll allow the PNG to be loaded progressively, but the filesize will be larger because the image will lose compressibility. I generally don't think it's worth it. I'd leave it off. If you care about responsive web design or the ability to load the image quickly and progressively, then I'd just use a progressive JPEG, to be honest.</li>
+				<li>Save Background Color - Leave this off, but it's not super important. The background of the image is not visible for us, so we have no reason to save it.</li>
+				<li>Save Gamma - Leave this off, but it's not super important. It's not a value that we care about, given that we digitally edited the image with very light and dark text.</li>
+				<li>Save Layer Offset - Leave this off. The largest layer (the background) fills the canvas perfectly so there's no reason to save it. Turning it on usually causes more problems than it's worth, unless you know why you want to turn it on.</li>
+				<li>Save Resolution - I'd leave this on, but it's not super important. Leaving it on will keep the value the source image if you had it in case it matters. If the original image didn't have resolution info then it'll probably save it as 72 pixels per inch, and most programs ignore this anyway so there isn't any real harm in doing this.</li>
+				<li>Save Creation Time - Up to you. Your filesystem will also track this, but filesystem modification/creation time is not super reliable.</li>
+				<li>Save Comment - Your Choice. My checkbox above is disabled because I didn't have an image comment. If you did then it's your choice. If you want to add an image comment you need to go to <i>Image → Image Properties</i>, and then add a comment in the <i>Comment</i> tab. Note that PNG comments are not as widely supported as JPEG comments. They do not show up with ImageMagick's <code>identify -verbose</code> or with Eye of Mate/GNOME, but you can view them with <code>exiftool</code>.</li>
+				<li>Save Color Values from Transparent Pixels - Leave this off, but it's not super important. In our case it doesn't actually matter because we have no transparent pixels, but you generally should leave this off unless you know why you want to leave it on.</li>
 				<li>Compression Level - Set this as high as it goes. It's lossless image compression so you don't have any reason not to set it all the way up.</li>
 			</ul>
 		</p>
 		<h4>JPEG options</h4>
-		<p>JPEG is a lossy image format. It's supported everywhere. Lossy images sound bad because of the loss of data but you can achieve a filesize that's much smaller than anything achievable through lossless means. JPEGs are famous for being terrible, but they're really not. If you couldn't tell, I like using JPEGs over PNGs for this sort of image. They're not useful for everything but I really think people don't take it seriously enough, especially since JPEG doesn't work now like it did in the late 1990s. People say "JPEGs look terrible" and they're only somewhat right.</p>
+		<p>JPEG is a lossy image format. It's supported everywhere. Lossy images sound bad because of the loss of data but you can achieve a filesize that's much smaller than anything achievable through lossless means. JPEGs are famous for being terrible, but they're really not. If you couldn't tell, I like using JPEGs over PNGs for this sort of image. They're not useful for everything but I really think people don't take it seriously enough, especially since JPEG doesn't work now like it did in the late 1990s. People say "JPEGs look terrible," but they're only somewhat right.</p>
 		<p>One thing JPEG images are famous for is <i>Macroblocking</i>, which is the blockiness created when you turn the quality way down:</p>
 		<p style="text-align: center;"><img src="macroblocking-cat.png"></p>
 		<p>Let me be straight, <b>macroblocking will not be a problem for us.</b> It's a characteristic problem of <i>low</i>-quality JPEGs. Another artifact that JPEG images are famous for is the fuzziness that occurs near sharp boundaries, such as text. This is called <i>Ringing:</i></p>
 		<p style="text-align: center;"><img src="ringing-life.png"></p>
-		<p>This is another thing that you won't really have to worry about, i.e. <b>ringing will not be a problem for us.</b> Ringing is a characteristic problem of <i>mid</i>-quality JPEGs. We're going to be using high quality JPEGs, and now that I've stifled your fears, let's actually get to the JPEG export settings.</p>
+		<p>This is another thing that you won't really have to worry about, i.e. <b>ringing will not be a problem for us.</b> Ringing is a characteristic problem of <i>mid</i>-quality JPEGs. We're going to be using high quality JPEGs. Lossless predictive formats like PNG excel at large, flat or mostly flat areas, and JPEG struggles the most at sharp boundaries, so JPEG is not an appropriate tool to compress screenshots of text. However, for anything else, JPEG is potentially an appropriate tool and it's at least worth considering. Anyway, let's actually get to the JPEG export settings. </p>
 		<p style="text-align: center;"><img src="shot16.png"></p>
 		<p>About the various options:
 			<ul>
-				<li>Quality - set this to 95 or higher. I prefer to set it to 95. Many people like to use 90 but when it's that low, ringing artifacts can start to emerge. To me, 100 is unnecessarily high for most images although for others it can help.</li>
-				<li>Optimize - Yes. The only reason not to would be because some computer running Windows 95 might not like it.</li>
-				<li>Progressive - Yes. This allowes the image to be downloaded progressively, so if only a fraction of the image has loaded you'll get a lower-resolution version of the same image rather than part of the image cut off at the top. Unlike PNG, progressive JPEGs are smaller than their nonprogressive counterparts. The only reason you wouldn't do this is because some computer running Windows 95 might not like it.</li>
+				<li>Quality - set this to 95 or higher. I personally set it 98 most of the time as this achieves <i>transparency</i>, which means "no perceived loss." Many people like to use 90 as a standard, but when it's that low ringing artifacts can start to emerge. I recommend against setting it to 100 unless you really think it matters. 98 → 99 is often a 50 percent filesize increase and 98 → 100 is often more than twice the filesize. Note that if you need to set it to 100 to achieve transparency you should consider using a lossless format like PNG in addition to a quality-100 JPEG.</li>
+				<li>Optimize - Yes. If you ever need to turn this off for some reason, you will know.</li>
+				<li>Progressive - Yes. This allowes the image to be downloaded progressively, so if only a fraction of the image has loaded you'll get a lower-resolution version of the same image rather than part of the image cut off at the top. Unlike PNG, progressive JPEGs are smaller than their nonprogressive counterparts. If you ever need to turn this off for some reaosn, you will know.</li>
 				<li>Use Restart Markers - I don't actually know what this does. It's off by default so I left it off.</li>
 				<li>Save Thumbnail - This is unnecessary because we're using progressive JPEG. Leave it off.</li>
-				<li>Sumbsampling - Use 4:2:0 (chroma quartered). What does this do? It takes the chroma (color information) and cuts the resolution in half in each direction. This is called Chroma Subsampling. This doesn't reduce the resolution of the image because the luma (lightness/value information) is still fully there. It sounds like this would be awful, but it's not. <b>You won't be able to tell the difference. <i>Trust Me.</i></b> The only time you would be able to tell is if the image you're compressing is a screenshot of colored text, or something similar. The reason for this is humans suck at seeing differences in color but we're pretty good at noticing differences in lightness, so this is a human-specific visual optimization.</li>
+				<li>Sumbsampling - Use 4:2:0 (chroma quartered). What does this do? It takes the chroma (color information) and cuts the resolution in half in each direction. This is called Chroma Subsampling. This doesn't reduce the resolution of the image because the luma (lightness/value information) is still fully there. It sounds like this would be awful, but it's not. <b>You won't be able to tell the difference. <i>Trust Me.</i></b> Less emphatically, this is true almost all the time, but not all the time. However, we <i>are</i> using lossy compression, so this should not surprise you. The idea behind chroma subsampling is that humans suck at seeing differences in color but we're pretty good at noticing differences in lightness, so this is a human-specific visual optimization.</li>
 				<li>DCT Method - Integer. Fast Integer is worse than Integer visually, and there's no real visual quality difference betwee Integer and Floating Point. Integer is faster for both you and the person viewing the image, so use that.</li>
-				<li>Comment - I don't care, knock yourself out kid.</li>
+				<li>Comment - I don't care. Knock yourself out, kid.</li>
 			</ul>
 		</p>
 		</section>
 		<section>
 		<h3>Final Images</h3>
-		<p>Here's the final image. You can view the <a href="final-1080.jpg">JPEG (191 kB)</a> or the <a href="final-1080.png">PNG (1.1 MB)</a> by clicking the links, or you could view the embedding below.</p>
+		<p>Here's the final image. You can view the <a href="final-1080.jpg">JPEG (187k)</a> or the <a href="final-1080.png">PNG (949k)</a> by clicking the links, or you could view the embedding below.</p>
 		<p style="text-align: center;"><img class="shadow" src="final-1080.jpg" width="100%"></p>
 		<p><div style="display: inline-block; width: 75%; vertical-align: middle;"><div style="float: left; font-size: 24px;">Thank you for reading. This is my first exhaustive tutorial, and I hope it was helpful in <i>some</i> way, even if it was a bit long. Until next time, thebombzen out.</div></div><div style="display: inline-block; width: 25%; vertical-align: middle;""><div style="float: right; width: 100%; text-align: right;"><img class="shadow" src="../../images/touko/touko_128.png"></div></p>
 	</div>
