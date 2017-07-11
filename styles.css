@@ -52,6 +52,7 @@ li {
 }
 
 #maintitle {
+	font-family: "Gandhi Sans";
 	font-weight: 700;
 	font-size: 48px;
 	text-align: center;
@@ -72,8 +73,14 @@ li {
 	text-decoration: underline;
 	font-size: 24px;
 	letter-spacing: 0.25px;
+	font-family: "Gandhi Sans";
 	font-weight: 700;
 	font-style: italic;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Gandhi Sans";
+	font-weight: 700;
 }
 
 .home-page {
