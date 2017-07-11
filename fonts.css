@@ -70,3 +70,40 @@
   src: url('fonts/woff2/Open_Sans/OpenSans-BoldItalic.woff2') format('woff2'),
   	url('fonts/ttf/Open_Sans/OpenSans-BoldItalic.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'Gandhi Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Gandhi Sans Regular'), local('GandhiSans-Regular');
+  src: url('fonts/woff2/Gandhi_Sans/GandhiSans-Regular.woff2') format('woff2'),
+    url('fonts/otf/Gandhi_Sans/GandhiSans-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gandhi Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Gandhi Sans Italic'), local('GandhiSans-Italic');
+  src: url('fonts/woff2/Gandhi_Sans/GandhiSans-Italic.woff2') format('woff2'),
+    url('fonts/otf/Gandhi_Sans/GandhiSans-Italic.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gandhi Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Gandhi Sans Bold'), local('GandhiSans-Bold');
+  src: url('fonts/woff2/Gandhi_Sans/GandhiSans-Bold.woff2') format('woff2'),
+    url('fonts/otf/Gandhi_Sans/GandhiSans-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Gandhi Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Gandhi Sans Bold Italic'), local('GandhiSans-BoldItalic');
+  src: url('fonts/woff2/Gandhi_Sans/GandhiSans-BoldItalic.woff2') format('woff2'),
+    url('fonts/otf/Gandhi_Sans/GandhiSans-BoldItalic.otf') format('opentype');
+}
+
