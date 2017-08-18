@@ -194,12 +194,7 @@ function quad_calcPostEvents(){
 		}
 		var extra = getK(r0s[i], 3) * (s0s[i] - exp);
 		var bonus = Math.max(0, extra - 2 * B);
-		var est = r0s[i] + extra + bonus;
-		if (est < r0s[i]){
-			est = Math.floor(est);		
-		} else {
-			est = Math.ceil(est);
-		}
+		var est = Math.round(r0s[i] + extra + bonus);
 		if (est < 100){
 			est = 100;
 		}
