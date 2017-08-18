@@ -172,6 +172,7 @@ function quad_calcPostEvents(){
 		s0s[j] = +(document.getElementById("score"+j).value);
 	}
 	var r1s = [0, 0, 0, 0];
+	const B = 14; // As of May 1, 2017
 	for (var i = 0; i < 4; i++){
 		var exp = 0;
 		for (var j = 0; j < 4; j++){
@@ -179,10 +180,7 @@ function quad_calcPostEvents(){
 			exp += getExpectancy(r0s[i], r0s[j]);
 		}
 		var extra = getK(r0s[i], 3) * (s0s[i] - exp);
-		var bonus = 0;
-		if (extra > 20){
-			bonus = extra - 20;
-		}
+		var bonus = Math.max(0, extra - 2 * B);
 		r1s[i] = r0s[i] + extra + bonus;
 		if (r1s[i] < 100){
 			r1s[i] = 100;
@@ -195,10 +193,7 @@ function quad_calcPostEvents(){
 			exp += getExpectancy(r0s[i], r1s[j]);
 		}
 		var extra = getK(r0s[i], 3) * (s0s[i] - exp);
-		var bonus = 0;
-		if (extra > 20){
-			bonus = extra - 20;
-		}
+		var bonus = Math.max(0, extra - 2 * B);
 		var est = r0s[i] + extra + bonus;
 		if (est < r0s[i]){
 			est = Math.floor(est);		
