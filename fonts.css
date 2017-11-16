@@ -107,3 +107,65 @@
     url('fonts/otf/Gandhi_Sans/GandhiSans-BoldItalic.otf') format('opentype');
 }
 
+@font-face {
+  font-family: 'Linux Libertine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Linux Libertine Regular'), local('LinLibertine_Rah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_Rah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_Rah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Linux Libertine Italic'), local('LinLibertine_RIah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_RIah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_RIah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Linux Libertine Semibold'), local('LinLibertine_Zah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_Zah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_Zah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Linux Libertine Semibold Italic'), local('LinLibertine_ZIah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_ZIah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_ZIah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Linux Libertine Bold'), local('LinLibertine_Bah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_Bah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_Bah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Linux Libertine';
+  font-style: italic;
+  font-weight: 800;
+  src: local('Linux Libertine Bold Italic'), local('LinLibertine_BIah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_BIah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_BIah.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Linux Libertine Display';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Linux Libertine Display Regular'), local('LinLibertine_DRah');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_DRah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_DRah.ttf') format('truetype');
+}
