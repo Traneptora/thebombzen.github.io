@@ -130,8 +130,8 @@
   font-style: normal;
   font-weight: 600;
   src: local('Linux Libertine Semibold'), local('LinLibertine_Zah');
-  src: url('fonts/woff2/linux_libertine/LinLibertine_Zah.woff2') format('woff2'),
-    url('fonts/ttf/linux_libertine/LinLibertine_Zah.ttf') format('truetype');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_RZah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_RZah.ttf') format('truetype');
 }
 
 @font-face {
@@ -139,26 +139,26 @@
   font-style: italic;
   font-weight: 600;
   src: local('Linux Libertine Semibold Italic'), local('LinLibertine_ZIah');
-  src: url('fonts/woff2/linux_libertine/LinLibertine_ZIah.woff2') format('woff2'),
-    url('fonts/ttf/linux_libertine/LinLibertine_ZIah.ttf') format('truetype');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_RZIah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_RZIah.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Linux Libertine';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
   src: local('Linux Libertine Bold'), local('LinLibertine_Bah');
-  src: url('fonts/woff2/linux_libertine/LinLibertine_Bah.woff2') format('woff2'),
-    url('fonts/ttf/linux_libertine/LinLibertine_Bah.ttf') format('truetype');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_RBah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_RBah.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Linux Libertine';
   font-style: italic;
-  font-weight: 800;
+  font-weight: 700;
   src: local('Linux Libertine Bold Italic'), local('LinLibertine_BIah');
-  src: url('fonts/woff2/linux_libertine/LinLibertine_BIah.woff2') format('woff2'),
-    url('fonts/ttf/linux_libertine/LinLibertine_BIah.ttf') format('truetype');
+  src: url('fonts/woff2/linux_libertine/LinLibertine_RBIah.woff2') format('woff2'),
+    url('fonts/ttf/linux_libertine/LinLibertine_RBIah.ttf') format('truetype');
 }
 
 @font-face {
