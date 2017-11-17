@@ -106,6 +106,7 @@ a img:active {
 
 code {
 	display: inline-block;
+	font-family: "Noto Mono";
 }
 
 .tabledisplay {
