@@ -10,11 +10,11 @@ body {
 }
 
 body, textarea {
-	font-family: "Open Sans";
+	font-family: "Linux Libertine";
 	color: #081F5D;
 	line-height: 1.25;
-	font-size: 16px;
-	letter-spacing: 0.125px;
+	font-size: 17px;
+	letter-spacing: 0.1875px;
 	font-weight: 400;
 }
 
@@ -52,8 +52,8 @@ li {
 }
 
 #maintitle {
-	font-family: "Gandhi Sans";
-	font-weight: 700;
+	font-family: "Linux Biolinum";
+	font-weight: 400;
 	font-size: 48px;
 	text-align: center;
 	letter-spacing: 0.5px;
@@ -73,13 +73,13 @@ li {
 	text-decoration: underline;
 	font-size: 24px;
 	letter-spacing: 0.25px;
-	font-family: "Gandhi Sans";
-	font-weight: 700;
+	font-family: "Linux Biolinum";
+	font-weight: 400;
 	font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Gandhi Sans";
+	font-family: "Linux Biolinum";
 	font-weight: 700;
 }
 
