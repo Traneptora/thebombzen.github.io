@@ -1,6 +1,3 @@
-/* @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic); */
-@import url('fonts.css');
-
 body {
 	text-align: center;
 	background-color: #F8F8F8;
@@ -10,11 +7,11 @@ body {
 }
 
 body, textarea {
-	font-family: "Linux Libertine";
+	font-family: "Noto Sans Display";
 	color: #081F5D;
 	line-height: 1.25;
 	font-size: 17px;
-	letter-spacing: 0.1875px;
+	letter-spacing: 0.125px;
 	font-weight: 400;
 }
 
@@ -23,6 +20,10 @@ blockquote {
     color: #081F5D;
     font-style: italic;
     padding-left: 10px;
+}
+
+a {
+	text-decoration: none;
 }
 
 a:link, a:visited {
@@ -35,10 +36,12 @@ a:active, a:focus, a:hover {
 
 a.importantlink {
 	font-weight: 600;
+	text-decoration: underline;
 }
 
-li a:first-of-type {
+.linklist li a:first-of-type {
 	font-weight: 600;
+	text-decoration: underline;
 }
 
 ol li, ul li {
@@ -52,8 +55,7 @@ li {
 }
 
 #maintitle {
-	font-family: "Linux Biolinum";
-	font-weight: 400;
+	font-weight: 600;
 	font-size: 48px;
 	text-align: center;
 	letter-spacing: 0.5px;
@@ -73,14 +75,12 @@ li {
 	text-decoration: underline;
 	font-size: 24px;
 	letter-spacing: 0.25px;
-	font-family: "Linux Biolinum";
-	font-weight: 400;
+	font-weight: 600;
 	font-style: italic;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: "Linux Biolinum";
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .home-page {
