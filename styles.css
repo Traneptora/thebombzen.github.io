@@ -82,6 +82,10 @@ a.importantlink {
 	text-decoration: underline;
 }
 
+ol.linklist {
+	font-weight: 600;
+}
+
 .section-header {
 	text-decoration: underline;
 	font-size: 24px;
