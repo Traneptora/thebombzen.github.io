@@ -59,6 +59,14 @@ code {
 	font-family: "Noto Mono";
 }
 
+code.codeblock {
+	display: block;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top:  0.5em;
+	margin-bottom:  0.5em;
+}
+
 .home-page {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
