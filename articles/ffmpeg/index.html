@@ -92,7 +92,7 @@
 				ffmpeg -i bluray:"path/to/bluray/"
 			</code></p>
 			<p>If the above recognizes the bluray, it will list the streams. Make sure you use the path to the directoring containing <code>BDMV/</code> and not the <code>BDMV/</code> itself.</p><p>This will work: <code class="codeblock">ffmpeg -i bluray:paradox-spiral/</code>This will <i>not</i> work: <code class="codeblock">ffmpeg -i bluray:paradox-sprial/BDMV/</code></p>
-			<p>It's worth mentioning that you cannot truly remux to matroska since blurays use <code>bluray_pcm</code> as their audio codec and matroska doesn't support that. However, you can covert it safely to FLAC and not only will nobody care that it's not a "true remux" but the space saved is a bonus. Anyway, here's the command in full:</p>
+			<p>It's worth mentioning that you cannot truly remux to matroska since blurays use <code>bluray_pcm</code> as their audio codec and matroska doesn't support that. However, you can convert it safely to FLAC and not only will nobody care that it's not a "true remux" but the space saved is a bonus. Anyway, here's the command in full:</p>
 			<p><code class="codeblock">
 				ffmpeg -i bluray:"path/to/bluray/" -map 0 -c copy -c:a flac remuxed-bluray.mkv
 			</code></p>
